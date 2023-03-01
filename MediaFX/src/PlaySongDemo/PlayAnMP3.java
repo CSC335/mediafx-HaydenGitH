@@ -1,7 +1,7 @@
 package PlaySongDemo;
 
 /**
- * This code will play any song assuming that file is in folder songfiles. 
+ * This code will play any song assuming that file is in folder songfiles. 	
  * 
  * Programmer Rick Mercer
  */
@@ -28,14 +28,17 @@ public class PlayAnMP3 extends Application {
   @Override
   public void start(Stage stage) throws Exception {
     BorderPane pane = new BorderPane();
-    String path = "songfiles/Capture.mp3";
-    pane.setCenter( new Label(path));
+    // I, Hayden Scott, changed the song to be played before pushing to GitHub
+    String path = "songfiles/DanseMacabreViolinHook.mp3";
+    
     playASong(path);
-    // Put the pane in a sized Scene and show the GUI
+    // swapped these 2 lines
+    pane.setCenter( new Label(path));
     Scene scene = new Scene(pane, 255, 85); // 255 pixels wide, 85 pixels tall
     stage.setScene(scene);
     // Don't forget to show the running app:
     stage.show();
+    // The song has been changed - Hayden Scott
   }
 
   
